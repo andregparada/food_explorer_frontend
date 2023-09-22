@@ -34,7 +34,6 @@ export const Logo = styled.div`
     gap: 8px;
 
     h2 {
-        font-family: 'Roboto', sans-serif;
         line-height: 21px;
     }
 `

@@ -3,7 +3,9 @@ import styled from "styled-components";
 export const Container = styled.button`
     background: none;
     color: ${({ theme }) => theme.COLORS.LIGHT_300};
+    
+    display: flex;
+    gap: 10px;
 
     border: none;
-    font-family: 'Roboto', sans-serif;
 `;
