@@ -1,11 +1,11 @@
 import { Container } from "./styles";
 
-import { Button } from "../../components/Button";
+import { Navbar } from "../../components/Navbar";
 
 export function Dish() {
   return(
     <Container>
-      <Button />
+      <Navbar />
     </Container>
   )
 }
