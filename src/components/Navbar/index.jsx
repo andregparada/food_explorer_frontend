@@ -1,3 +1,4 @@
+import { AiOutlineMenu } from 'react-icons/ai'
 import { Container, Logo } from "./styles";
 
 export function Navbar() {

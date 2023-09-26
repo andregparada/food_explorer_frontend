@@ -8,5 +8,18 @@ export const Container = styled.div`
     grid-template-rows: 114px auto;
     grid-template-areas: 
     "header"
-    "content";
+    "content"
+    "footer";
+
+    > main {
+        grid-area: content;
+    }
+
+    > footer {
+        grid-area: footer;
+    }
 `;
+
+export const Content = styled.div`
+    padding: 16px 56px 34px;
+`

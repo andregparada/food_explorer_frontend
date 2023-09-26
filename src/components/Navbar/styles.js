@@ -29,11 +29,11 @@ export const Container = styled.header`
 
 export const Logo = styled.div`
     display: flex;
-    align-items: center;
+    align-items: start;
 
     gap: 8px;
 
     h2 {
-        line-height: 21px;
+        font-size: 16px;
     }
 `
