@@ -24,5 +24,24 @@ export default {
         TOMATO_400: "#AB4D55",
         TOMATO_100: "#750310",
 
-    }
+    },
+
+    FONTS: {
+        POPPINS_100_MEDIUM: "font-family: 'Poppins', sans-serif; letter-spacing: 0%; font-weight: 500; text-decoration: none; font-size: 1.4rem; line-height: 2.4rem;",
+        POPPINS_200_MEDIUM: "font-family: 'Poppins', sans-serif; letter-spacing: 0%; font-weight: 500; text-decoration: none; font-size: 2rem; line-height: 160%;",
+        POPPINS_300_BOLD: "font-family: 'Poppins', sans-serif; letter-spacing: 0%; font-weight: bold; text-decoration: none; font-size: 2.4rem; line-height: 140%;",
+        POPPINS_300_REGULAR: "font-family: 'Poppins', sans-serif; letter-spacing: 0%; font-weight: 400; text-decoration: none; font-size: 2.4rem; line-height: 140%;",
+        POPPINS_400_MEDIUM: "font-family: 'Poppins', sans-serif; letter-spacing: 0%; font-weight: 500; text-decoration: none; font-size: 3.2rem; line-height: 140%;",
+        POPPINS_500_MEDIUM: "font-family: 'Poppins', sans-serif; letter-spacing: 0%; font-weight: 500; text-decoration: none; font-size: 4rem; line-height: 140%;",
+        ROBOTO_SMALLEST_REGULAR: "font-family: 'Roboto', sans-serif; letter-spacing: 0%; font-weight: 400; text-decoration: none; font-size: 1.2rem; line-height: 160%;",
+        ROBOTO_SMALLER_REGULAR: "font-family: 'Roboto', sans-serif; letter-spacing: 0%; font-weight: 400; text-decoration: none; font-size: 1.4rem; line-height: 160%;",
+        ROBOTO_SMALLER_BOLD: "font-family: 'Roboto', sans-serif; letter-spacing: 0%; font-weight: 500; text-decoration: none; font-size: 1.4rem; line-height: 160%;",
+        ROBOTO_SMALL_SPACED: "font-family: 'Roboto', sans-serif; letter-spacing: 0%; font-weight: 400; text-decoration: none; font-size: 1.6rem; line-height: 160%;",
+        ROBOTO_SMALL_REGULAR: "font-family: 'Roboto', sans-serif; letter-spacing: 0%; font-weight: 400; text-decoration: none; font-size: 1.6rem; line-height: 100%;",
+        ROBOTO_BIG_BOLD: "font-family: 'Roboto', sans-serif; letter-spacing: 0%; font-weight: bold; text-decoration: none; font-size: 2rem; line-height: 160%;",
+        ROBOTO_BIGGER_BOLD: "font-family: 'Roboto', sans-serif; letter-spacing: 0%; font-weight: bold; text-decoration: none; font-size: 2.4rem; line-height: normal;",
+        ROBOTO_BIGGEST_REGULAR: "font-family: 'Roboto', sans-serif; letter-spacing: 0%; font-weight: 400; text-decoration: none; font-size: 3.2rem; line-height: 160%;",
+        ROBOTO_GIANT_BOLD: "font-family: 'Roboto', sans-serif; letter-spacing: 0%; font-weight: bold; text-decoration: none; font-size: 4.2rem; line-height: normal;",
+    },
+
 }

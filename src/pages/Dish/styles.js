@@ -15,10 +15,6 @@ export const Container = styled.div`
     > main {
         grid-area: content;
     }
-
-    > footer {
-        grid-area: footer;
-    }
 `;
 
 export const Content = styled.div`

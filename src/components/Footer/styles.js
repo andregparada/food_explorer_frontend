@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 export const Container = styled.footer`
+    grid-area: footer;
+    
     width: 100%;
     
     display: flex;
@@ -9,7 +11,6 @@ export const Container = styled.footer`
 
     justify-content: space-around;
     padding: 2.2rem 2.7rem;
-
 
     background-color: ${({theme}) => theme.COLORS.DARK_600};
     
