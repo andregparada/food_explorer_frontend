@@ -3,15 +3,15 @@ import styled from "styled-components";
 export const Container = styled.header`
     grid-area: header;
 
-    height: 114px;
+    height: 11.4rem;
     width: 100%;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 16px;
+    gap: 1.6rem;
 
-    padding: 56px 28px 24px;
+    padding: 5.6rem 2.8rem 2.4rem;
 
     background: ${({ theme }) => theme.COLORS.DARK_700};
 
@@ -22,8 +22,8 @@ export const Container = styled.header`
     svg:last-child {
         position: absolute;
 
-        top: -10px;
-        right: -10px;
+        top: -1rem;
+        right: -1rem;
     }
 `
 
@@ -31,9 +31,9 @@ export const Logo = styled.div`
     display: flex;
     align-items: start;
 
-    gap: 8px;
+    gap: 0.8rem;
 
     h2 {
-        font-size: 16px;
+        font-size: 1.6rem;
     }
 `

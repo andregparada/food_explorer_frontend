@@ -5,15 +5,20 @@ export const Container = styled.button`
     background-color: ${({ theme }) => theme.COLORS.TOMATO_100};
     color: ${({ theme }) => theme.COLORS.LIGHT_100};
 
-    height: 48px;
+    height: 4.8rem;
     border: 0;
-    padding: 0px 16px; /*ver*/
-    margin-top: 16px; /*ver*/
-    border-radius: 5px;
+    padding: 0 1.6rem; /*ver*/
+    margin-top: 1.6rem; /*ver*/
+    border-radius: 0.5rem;
 
     font-weight: 500;
-    font-size: 14px;
-    line-height: 24px;
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
 
     &:disabled {
         opacity: 0.5;

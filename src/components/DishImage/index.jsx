@@ -4,7 +4,7 @@ export function DishImage({ source, alt, description }) {
     return(
         <Container>
             <img src={source} alt={alt} />
-            <p>{description}</p>
+            <label>{description}</label>
         </Container>
     )
 }

@@ -5,7 +5,7 @@ export const Container = styled.button`
     color: ${({ theme }) => theme.COLORS.LIGHT_300};
     
     display: flex;
-    gap: 10px;
+    gap: 1rem;
 
     border: none;
 `;

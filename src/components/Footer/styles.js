@@ -1,21 +1,23 @@
 import styled from "styled-components";
 
 export const Container = styled.footer`
+    width: 100%;
+    
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 0.8rem;
 
     justify-content: space-around;
-    padding: 22px 27px;
+    padding: 2.2rem 2.7rem;
 
 
     background-color: ${({theme}) => theme.COLORS.DARK_600};
-
+    
     p {
         color: ${({theme}) => theme.COLORS.LIGHT_200};
         text-align: right;
 
-        font-size: 12px;
+        font-size: 1.2rem;
     }
 `;
 
@@ -23,12 +25,12 @@ export const Logo = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-around;
-    width: 140px;
+    width: 14rem;
 
-    gap: 8px;
+    gap: 0.8rem;
 
     h2 {
         color: ${({theme}) => theme.COLORS.LIGHT_700};
-        font-size: 16px;
+        font-size: 1.6rem;
     }
 `
