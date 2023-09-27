@@ -2,6 +2,7 @@ import { Container, Content, Dishes, Header } from "./styles";
 
 import { Navbar } from "../../components/Navbar"
 import { Footer } from "../../components/Footer"
+import { Card } from "../../components/Card";
 
 export function Home() {
     return( 
@@ -17,7 +18,12 @@ export function Home() {
 
                     <h3>Refeições</h3>
                     <Dishes>
-                        
+                        <Card 
+                            source="src\assets\dishes\salada_ravanello_small.png"
+                            alt="salada ravanello"
+                            name="Salada Ravanello >"
+                            price="R$ 49,97"
+                        />
                     </Dishes>
                 </Content>   
             </main>

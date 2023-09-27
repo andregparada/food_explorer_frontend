@@ -22,12 +22,12 @@ export function Dish() {
             />
             
             <DishImage 
-              source="src\assets\dishes\image 2.png"
+              source="src\assets\dishes\salada_ravanello.png"
               alt="Salada Caprese"
               description="Salada Ravanello"
             />
 
-            <p class="description">Rabanetes, folhas verdes e molho agridoce salpicados com gergelim.</p>
+            <p className="description">Rabanetes, folhas verdes e molho agridoce salpicados com gergelim.</p>
 
             <div className="tags">
               <Tag title="alface" />
