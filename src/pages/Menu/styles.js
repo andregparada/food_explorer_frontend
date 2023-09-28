@@ -30,4 +30,12 @@ export const Header = styled.header`
 
 export const Content = styled.div`
     margin: 3.6rem 2.8rem 0;
+
+    > button {
+        margin-top: 3.6rem;
+        width: 100%;
+        padding-bottom: 1rem;
+
+        border-bottom: 1px solid ${({ theme }) => theme.COLORS.DARK_1000};
+    }
 `;

@@ -6,9 +6,11 @@ export const Container = styled.div`
     display: flex;
     align-items: center;
     border-radius: .5rem;
+    padding-left: 1.4rem;
 
     background-color: ${({ theme }) => theme.COLORS.DARK_900};
     color: ${({ theme }) => theme.COLORS.LIGHT_500};
+
 
     > input {
         width: 100%;
