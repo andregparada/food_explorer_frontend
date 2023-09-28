@@ -34,6 +34,7 @@ export const Content = styled.div`
 export const Header = styled.div`
     height: 12rem;
     padding: 3.6rem .8rem 2.2rem 15.3rem;
+    border-radius: .3rem;
 
     background: hsl(198, 61%, 9%);
 
@@ -60,5 +61,7 @@ export const Header = styled.div`
 `;
 
 export const Dishes = styled.div`
+    display: flex;
+    margin: 2.4rem 0;
 
 `;

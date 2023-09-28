@@ -16,7 +16,7 @@ export function Home() {
                         <p>Sinta o cuidado do preparo com ingredientes selecionados.</p>
                     </Header>
 
-                    <h3>Refeições</h3>
+                    <h3>Entradas</h3>
                     <Dishes>
                         <Card 
                             source="src\assets\dishes\salada_ravanello_small.png"
@@ -25,6 +25,27 @@ export function Home() {
                             price="R$ 49,97"
                         />
                     </Dishes>
+
+                    <h3>Pratos Principais</h3>
+                    <Dishes>
+                        <Card 
+                            source="src\assets\dishes\salada_ravanello_small.png"
+                            alt="salada ravanello"
+                            name="Salada Ravanello >"
+                            price="R$ 49,97"
+                        />
+                    </Dishes>
+                    
+                    <h3>Pratos Principais</h3>
+                    <Dishes>
+                        <Card 
+                            source="src\assets\dishes\salada_ravanello_small.png"
+                            alt="salada ravanello"
+                            name="Salada Ravanello >"
+                            price="R$ 49,97"
+                        />
+                    </Dishes>
+
                 </Content>   
             </main>
 

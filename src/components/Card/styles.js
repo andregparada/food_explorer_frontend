@@ -5,6 +5,7 @@ export const Container = styled.div`
 
     width: 21rem;
     padding: 2.4rem;
+    border-radius: .8rem;
     text-align: center;
 
     position: relative;
