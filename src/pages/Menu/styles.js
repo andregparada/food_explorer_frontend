@@ -11,6 +11,10 @@ export const Container = styled.div`
     "content"
     "footer"
     ;
+
+    > main {
+        grid-area: content;
+    }
 `;
 
 export const Header = styled.header`
@@ -23,3 +27,7 @@ export const Header = styled.header`
 
     padding: 6rem 2.8rem 2.8rem 2.8rem;
 `
+
+export const Content = styled.div`
+    margin: 3.6rem 2.8rem 0;
+`;
