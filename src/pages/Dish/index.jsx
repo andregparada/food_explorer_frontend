@@ -7,6 +7,8 @@ import { Tag } from "../../components/Tag";
 import { Footer } from "../../components/Footer";
 import { Button } from "../../components/Button"
 
+import salada_ravanello from "../../assets/dishes/salada_ravanello.png"
+
 export function Dish() {
   return(
     <Container>
@@ -22,7 +24,7 @@ export function Dish() {
             />
             
             <DishImage 
-              source="src\assets\dishes\salada_ravanello.png"
+              source={salada_ravanello}
               alt="Salada Caprese"
               description="Salada Ravanello"
             />
