@@ -31,6 +31,10 @@ export const Header = styled.header`
 export const Content = styled.div`
     margin: 3.6rem 2.8rem 0;
 
+    > div {
+        border-radius: 0%.5rem;
+    }
+
     > button {
         margin-top: 3.6rem;
         width: 100%;

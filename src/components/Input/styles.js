@@ -5,7 +5,7 @@ export const Container = styled.div`
     height: 4.8rem;
     display: flex;
     align-items: center;
-    border-radius: .5rem;
+    border-radius: .8rem;
     padding-left: 1.4rem;
 
     background-color: ${({ theme }) => theme.COLORS.DARK_900};
@@ -18,10 +18,8 @@ export const Container = styled.div`
         background: transparent;
         border: 0;
 
-        padding: 1.6rem 1.4rem;
+        color: ${({ theme }) => theme.COLORS.LIGHT_100};
 
-        &:placeholder {
-            /* color: ${({ theme }) => theme.COLORS.LIGHT_500}; */
-        }
+        padding: 1.6rem 1.4rem;
     }
 `
