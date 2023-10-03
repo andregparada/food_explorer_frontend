@@ -19,7 +19,7 @@ export const Container = styled.div`
 
     button:last-of-type {
         ${({ theme }) => theme.FONTS.POPPINS_100_MEDIUM}
-        margin: 0 auto;
+        margin: 3.2rem auto 0;
     }
 
 `;

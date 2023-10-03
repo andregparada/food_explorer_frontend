@@ -23,7 +23,7 @@ export const Content = styled.div`
     display: flex;
     flex-direction: column;
 
-    > button:first-child {
+    a > button {
         margin-top: 2rem;
     }
 

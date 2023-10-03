@@ -17,14 +17,16 @@ export const Container = styled.header`
 
     div {
         position: relative;
-    }
 
-    svg:last-child {
+        > svg:last-child {
         position: absolute;
 
         top: -1rem;
         right: -1rem;
     }
+    }
+
+    
 `
 
 export const Logo = styled.div`

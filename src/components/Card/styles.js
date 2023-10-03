@@ -17,9 +17,12 @@ export const Container = styled.div`
         right: 1.6rem
     }
 
+    
     p {
         ${({ theme }) => theme.FONTS.POPPINS_100_MEDIUM}
         margin: 1.2rem 0 1.2rem;
+
+        color: ${({ theme }) => theme.COLORS.LIGHT_300};
     }
 
     span {

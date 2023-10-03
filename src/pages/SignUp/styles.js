@@ -13,13 +13,13 @@ export const Container = styled.div`
         margin-bottom: .8rem;
     }
 
-    > div, button {
-        margin-bottom: 3.2rem;
-    }
-
     button:last-of-type {
         ${({ theme }) => theme.FONTS.POPPINS_100_MEDIUM}
-        margin: 0 auto;
+        margin: 3.2rem auto 0;
+    }
+
+    > div, button {
+        margin-bottom: 3.2rem;
     }
 
 `;

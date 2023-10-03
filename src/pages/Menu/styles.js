@@ -35,7 +35,7 @@ export const Content = styled.div`
         border-radius: 0%.5rem;
     }
 
-    > button {
+    button {
         margin-top: 3.6rem;
         width: 100%;
         padding-bottom: 1rem;
