@@ -1,11 +1,18 @@
-import { Container, Logo } from "./styles";
 import { Link } from "react-router-dom";
 
-import { Input } from "../../components/Input"
-import { Button } from "../../components/Button"
-import { ButtonText } from "../../components/ButtonText"
+import { useAuth } from "../../hooks/auth";
+
+import { Input } from "../../components/Input";
+import { Button } from "../../components/Button";
+import { ButtonText } from "../../components/ButtonText";
+
+import { Container, Logo } from "./styles";
 
 export function SignIn() {
+
+    const data = useAuth();
+    console.log(data)
+
     return(
         <Container>
             <Logo>
