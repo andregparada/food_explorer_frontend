@@ -1,4 +1,7 @@
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+
+import { api } from "../../services/api"
 
 import { Container, Logo } from "./styles";
 
@@ -7,6 +10,31 @@ import { Button } from "../../components/Button"
 import { ButtonText } from "../../components/ButtonText"
 
 export function SignUp() {
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+
+    const navigate = useNavigate();
+
+    function handleSignUp() {
+        if (!name || !email || !password) {
+            return alert("Preencha todos os campos!");
+        }
+
+        api.post("/users", { name, email, password })
+            .then(() => {
+                alert("Usuário cadastrado com sucesso!");
+                navigate("/");
+            })
+            .catch(error => {
+                if(error.response) {
+                    alert(error.response.data.message);
+                } else {
+                    alert("Não foi possível cadastrar");
+                }
+            })
+    }
+
     return(
         <Container>
             <Logo>
@@ -20,21 +48,24 @@ export function SignUp() {
             <Input
                 type="text"
                 placeholder="Exemplo: Maria da Silva"
+                onChange={e => setName(e.target.value)}
             />
 
             <p>E-mail</p>
             <Input
                 type="text"
                 placeholder="Exemplo: exemplo@exemplo.com.br"
+                onChange={e => setEmail(e.target.value)}
             />
 
             <p>Senha</p>
             <Input
                 type="password"
                 placeholder="No mínimo 6 caracteres"
+                onChange={e => setPassword(e.target.value)}
             />
 
-            <Button title="Criar Conta" />
+            <Button title="Criar Conta" onClick={handleSignUp} />
 
             <Link to="/">
                 <ButtonText title="Já tenho uma conta" />
