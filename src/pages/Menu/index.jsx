@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { useAuth } from "../../hooks/auth";
 
 import { Container, Header, Content } from "./styles";
 
@@ -8,6 +9,8 @@ import { Input } from "../../components/Input";
 
 
 export function Menu() {
+    const { signOut } = useAuth();
+
     return (
         <Container>
             <Header>
@@ -31,10 +34,9 @@ export function Menu() {
                             </svg>}
                         placeholder="Busque por pratos ou ingredientes"
                     />
-                
-                <Link to="/">
-                    <ButtonText title="Sair" />
-                </Link>
+                    <Link to="/">
+                        <ButtonText title="Sair" onClick={signOut} />
+                    </Link>
 
                 </Content>
             </main>
