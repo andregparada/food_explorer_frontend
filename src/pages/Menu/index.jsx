@@ -10,7 +10,7 @@ import { Input } from "../../components/Input";
 
 
 export function Menu() {
-    const { signOut } = useAuth();
+    const { signOut, user } = useAuth();
 
     return (
         <Container>
@@ -38,6 +38,11 @@ export function Menu() {
                     <Link to="/">
                         <ButtonText title="Sair" onClick={signOut} />
                     </Link>
+                    { user.role === USER_ROLE.ADMIN && 
+                        <Link to="/">
+                            <ButtonText title="Novo Prato" onClick={signOut} />
+                        </Link>
+                    }
 
                 </Content>
             </main>

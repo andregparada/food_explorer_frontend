@@ -18,6 +18,9 @@ export const Container = styled.div`
 `;
 
 export const Header = styled.header`
+    button {
+        color: ${({ theme }) => theme.COLORS.LIGHT_100};
+        }
     grid-area: header;
 
     height: 11.4rem;
@@ -30,6 +33,7 @@ export const Header = styled.header`
 
 export const Content = styled.div`
     margin: 3.6rem 2.8rem 0;
+
 
     > div {
         border-radius: 0%.5rem;
