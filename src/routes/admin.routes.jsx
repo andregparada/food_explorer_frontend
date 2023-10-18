@@ -4,7 +4,7 @@ import { Dish } from "../pages/Dish";
 import { Home } from "../pages/Home";
 import { Menu } from "../pages/Menu";
 
-export function AppRoutes() {
+export function CustomerRoutes() {
     return(
         <Routes>
             <Route path="/" element={<Home />} />
