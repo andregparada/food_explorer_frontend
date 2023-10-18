@@ -10,7 +10,7 @@ export const Container = styled.div`
 
     position: relative;
 
-    > svg, a:first-of-type {
+    > svg, .admin-logo {
         position: absolute;
 
         top: 1.6rem;
@@ -45,7 +45,7 @@ export const Container = styled.div`
         margin-top: 2rem;
     }
 
-    div {
+    .admin-margin {
         margin-bottom: 7rem;
     }
 `
