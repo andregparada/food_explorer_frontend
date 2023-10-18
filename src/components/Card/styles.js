@@ -10,7 +10,7 @@ export const Container = styled.div`
 
     position: relative;
 
-    > svg {
+    > svg, a:first-of-type {
         position: absolute;
 
         top: 1.6rem;
@@ -43,5 +43,9 @@ export const Container = styled.div`
 
     button {
         margin-top: 2rem;
+    }
+
+    div {
+        margin-bottom: 7rem;
     }
 `

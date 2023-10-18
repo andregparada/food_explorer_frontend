@@ -6,6 +6,7 @@ import { Container, Logo } from "./styles";
 
 export function Navbar() {
     const { user } = useAuth();
+    
     return(
         <Container>
             <Link to="/menu">

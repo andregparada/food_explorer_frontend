@@ -1,5 +1,8 @@
 import { Container, Content, Dishes, Header } from "./styles";
 
+import { useAuth } from "../../hooks/auth";
+import { USER_ROLE } from "../../utils/roles";
+
 import { Navbar } from "../../components/Navbar"
 import { Footer } from "../../components/Footer"
 import { Card } from "../../components/Card";
@@ -8,6 +11,7 @@ import salada_ravanello from "../../assets/dishes/salada_ravanello_small.png"
 import macarrons from "../../assets/macarrons.png"
 
 export function Home() {
+    const { user } = useAuth();
     return( 
         <Container>
             <Navbar />

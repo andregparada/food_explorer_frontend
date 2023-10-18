@@ -41,4 +41,9 @@ export const Logo = styled.div`
     h2 {
         font-size: 1.6rem;
     }
+
+    p {
+        color: ${({ theme }) => theme.COLORS.CAKE_200};
+        ${({ theme }) => theme.FONTS.ROBOTO_SMALLEST_REGULAR}
+    }
 `
