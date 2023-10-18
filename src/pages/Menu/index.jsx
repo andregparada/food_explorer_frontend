@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useAuth } from "../../hooks/auth";
+import { USER_ROLE } from "../../utils/roles"
 
 import { Container, Header, Content } from "./styles";
 

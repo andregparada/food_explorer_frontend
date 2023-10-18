@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.header`
+
     grid-area: header;
 
     height: 11.4rem;
@@ -14,6 +15,7 @@ export const Container = styled.header`
     padding: 5.6rem 2.8rem 2.4rem;
 
     background: ${({ theme }) => theme.COLORS.DARK_700};
+    
 
     div {
         position: relative;
@@ -23,7 +25,7 @@ export const Container = styled.header`
 
         top: -1rem;
         right: -1rem;
-    }
+        }
     }
 
     
@@ -31,7 +33,8 @@ export const Container = styled.header`
 
 export const Logo = styled.div`
     display: flex;
-    align-items: start;
+    align-items: center;
+    padding: 0 6.5rem;
 
     gap: 0.8rem;
 
