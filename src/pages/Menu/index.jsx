@@ -39,8 +39,8 @@ export function Menu() {
                         <ButtonText title="Sair" onClick={signOut} />
                     </Link>
                     { user.role === USER_ROLE.ADMIN && 
-                        <Link to="/">
-                            <ButtonText title="Novo Prato" onClick={signOut} />
+                        <Link to="/newdish">
+                            <ButtonText title="Novo Prato" />
                         </Link>
                     }
 
