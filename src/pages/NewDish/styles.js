@@ -12,6 +12,12 @@ export const Container = styled.div`
     "footer"
     ;
 
+
+`;
+
+export const Content = styled.div`
+    padding: 1rem 3.2rem 5.3rem;
+
     .back {
         font-size: 1.6rem ;
     }
@@ -53,8 +59,4 @@ export const Container = styled.div`
     .save {
         background-color: ${({ theme }) => theme.COLORS.TOMATO_400};
     }
-`;
-
-export const Content = styled.div`
-    padding: 1rem 3.2rem 5.3rem;
 `

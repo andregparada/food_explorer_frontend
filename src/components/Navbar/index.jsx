@@ -23,6 +23,7 @@ export function Navbar() {
                 { user.role === USER_ROLE.ADMIN && <p>admin</p> }
             </Logo>
 
+            { user.role === USER_ROLE.ADMIN && <div className="hidden"></div> }
             
             { user.role === USER_ROLE.CUSTOMER && 
             

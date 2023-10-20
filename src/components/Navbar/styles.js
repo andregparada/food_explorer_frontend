@@ -1,5 +1,6 @@
 import styled from "styled-components";
 
+
 export const Container = styled.header`
 
     grid-area: header;
@@ -28,7 +29,6 @@ export const Container = styled.header`
         }
     }
 
-    
 `
 
 export const Logo = styled.div`
@@ -45,5 +45,6 @@ export const Logo = styled.div`
     p {
         color: ${({ theme }) => theme.COLORS.CAKE_200};
         ${({ theme }) => theme.FONTS.ROBOTO_SMALLEST_REGULAR}
+
     }
 `

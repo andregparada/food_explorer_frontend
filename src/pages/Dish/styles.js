@@ -27,6 +27,11 @@ export const Content = styled.div`
         margin-top: 2rem;
     }
 
+    img {
+        height: 26rem;
+        width: 26rem;
+    }
+
     .description {
         margin: 2.4rem 0;
         text-align: center;

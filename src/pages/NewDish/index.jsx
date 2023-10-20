@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 import { Container, Content } from "./styles";
@@ -11,6 +12,15 @@ import { Button } from "../../components/Button"
 import { Footer } from "../../components/Footer";
 
 export function NewDish() {
+    const [ingredients, setIngredients] = useState([]);
+    const[newIngredient, setNewIngredient] = useState("");
+
+    function handleAddIngredient(){
+        setIngredients(prevState => [...prevState, newIngredient]);
+        setNewIngredient("");
+    }
+
+
     return (
         <Container>
             <Navbar />
@@ -46,20 +56,36 @@ export function NewDish() {
                     />
 
                     <p>Categoria</p>
+                    <select>
+                        <option value="starter">Entrada</option>
+                        <option value="main">Prato Principal</option>
+                        <option value="desert">Sobremesa</option>
+                    </select>
                     <Input
-                        type="text"
+                        type=""
                         placeholder="Ex: Refeição"
                     />
 
                     <p>Ingredients</p>
                     <div className="ingredients">
+                        {
+                            ingredients.map((ingredient, index) => (
+                                <Ingredients
+                                    key={String(index)}
+                                    value={ingredient}
+                                    onClick={() => {}}
+                                />
+                            ))
+                        }
+
                         <Ingredients 
-                            value="Teste"
-                        />
-                        <Ingredients 
-                            placeholder="Adcionar"
                             isNew
+                            placeholder="Adcionar"
+                            value={newIngredient}
+                            onChange={e => setNewIngredient(e.target.value)}
+                            onClick={handleAddIngredient}
                         />
+                        
                     </div>
 
                     <p>Preço</p>

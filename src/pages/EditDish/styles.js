@@ -12,6 +12,14 @@ export const Container = styled.div`
     "footer"
     ;
 
+
+
+
+`;
+
+export const Content = styled.div`
+    padding: 1rem 3.2rem 5.3rem;
+
     .back {
         font-size: 1.6rem ;
     }
@@ -49,12 +57,6 @@ export const Container = styled.div`
         padding: .8rem;
         border-radius: .8rem;
     }
-
-
-`;
-
-export const Content = styled.div`
-    padding: 1rem 3.2rem 5.3rem;
 
     .buttons {
         display: flex;
