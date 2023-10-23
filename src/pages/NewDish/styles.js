@@ -32,6 +32,8 @@ export const Content = styled.div`
     }
 
     p {
+        ${({ theme }) => theme.FONTS.ROBOTO_SMALL_REGULAR}
+        color: ${({ theme }) => theme.COLORS.LIGHT_400};
         margin: 2.4rem 0 1.6rem;
     }
 
