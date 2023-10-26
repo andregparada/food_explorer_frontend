@@ -36,6 +36,33 @@ function AuthProvider({ children }) {
         setData({})
     }
 
+    // async function addDish({ dish, imageFile }) {
+    //     try { 
+    //         const fileUploadForm = new FormData();
+    //         fileUploadForm.append("image", imageFile);
+            
+    //         const response = await api.patch("/dishes", fileUploadForm)
+    //         dish.image = response.data.image
+
+    //         await api.post("/dishes", dish);
+            
+    //         alert("Prato criado com sucesso!");
+
+    //     } catch (error) {
+    //         if(error.response) {
+    //             alert(error.response.data.message);
+    //         } else {
+    //             alert("Não foi possível adcionar prato.")
+    //         }
+    //     }
+
+        
+
+    //     alert("Prato criado com sucesso!");
+    //     navigate("/");
+    // }
+
+
     useEffect(() => {
         const token = localStorage.getItem("@foodexplorer:token");
         const user = localStorage.getItem("@foodexplorer:user");
@@ -55,6 +82,7 @@ function AuthProvider({ children }) {
         <AuthContexxt.Provider value={{ 
             signIn,
             signOut,
+            // addDish,
             user:data.user 
         }}>
             {children}

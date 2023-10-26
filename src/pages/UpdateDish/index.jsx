@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import { useNavigate } from "react-router-dom";
 
-// import { useAuth } from "../../hooks/auth";
+import { useAuth } from "../../hooks/auth";
 
 import { api } from "../../services/api";
 
@@ -17,8 +17,8 @@ import { Ingredients } from "../../components/Ingredients";
 import { Button } from "../../components/Button"
 import { Footer } from "../../components/Footer";
 
-export function NewDish() {
-    // const { addDish } = useAuth();
+export function UpdateDish() {
+    const { addDish } = useAuth();
 
     const [imageFile, setImageFile] =useState(null)
     const [name, setName] = useState("")
@@ -45,7 +45,7 @@ export function NewDish() {
         setIngredients(prevState => prevState.filter(ingredient => ingredient !== deleted));
     }
 
-    async function handleNewDish() {
+    async function handleAddDish() {
         if(!name || !categorie || !price  || !description) {
             return alert("Preencha todos os campos antes de adcionar prato.")
         }
@@ -62,9 +62,7 @@ export function NewDish() {
             ingredients
         }
 
-        await api.post("/dishes", dish);
-        // await addDish({ dish, imageFile })
-        alert("Prato criado com sucesso")
+        await addDish({ dish, imageFile })
 
         navigate("/");
     }
@@ -85,7 +83,7 @@ export function NewDish() {
                         />
                     </Link>
 
-                    <h1>Novo prato</h1>
+                    <h1>Editar prato</h1>
 
                     <p>Imagem do prato</p>
                     <label htmlFor="image"><div className="image-button"><svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -155,7 +153,7 @@ export function NewDish() {
                     <Button 
                         className="save" 
                         title="Salvar alterações" 
-                        onClick={handleNewDish}
+                        onClick={handleAddDish}
                     />
 
                 </Content>

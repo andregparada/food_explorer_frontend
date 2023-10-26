@@ -18,6 +18,30 @@ export const Container = styled.div`
 export const Content = styled.div`
     padding: 1rem 3.2rem 5.3rem;
 
+    #image {
+        
+        display: none;
+    }
+
+    .image-button {
+            padding: 1.2rem 0 1.2rem 2.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+
+            gap: .8rem;
+            border-radius: .8rem;
+
+            background-color: ${({ theme }) => theme.COLORS.DARK_800};
+
+            ${({ theme }) => theme.FONTS.POPPINS_100_MEDIUM}
+            color: ${({ theme }) => theme.COLORS.LIGHT_100};
+            p {
+                margin: 0;
+            }
+        }
+
+
     .back {
         font-size: 1.6rem ;
     }
@@ -45,6 +69,19 @@ export const Content = styled.div`
 
     > main {
         grid-area: content;
+    }
+
+    select {
+        width: 100%;
+        height: 4.8rem;
+        border: none;
+        border-radius: .8rem;
+        padding: 1.3rem 1.6rem;
+
+        background-color: ${({ theme }) => theme.COLORS.DARK_900};
+        color: ${({ theme }) => theme.COLORS.LIGHT_400};
+
+        ${({ theme }) => theme.FONTS.ROBOTO_SMALLER_REGULAR}
     }
 
     .ingredients {
