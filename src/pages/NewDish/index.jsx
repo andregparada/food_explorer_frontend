@@ -54,17 +54,18 @@ export function NewDish() {
             return alert("Você deixou um ingrediente no campo para adiconar. Clique para adcionar ou deixe o campo vazio.")
         }
 
-        const dish = {
-            name,
-            categorie,
-            price,
-            description,
-            ingredients
-        }
+        const formData = new FormData
 
-        await api.post("/dishes", dish);
+        formData.append("name", name);
+        formData.append("description", description);
+        formData.append("price", price);
+        formData.append("categorie", categorie);
+        formData.append("ingredients", ingredients);
+        formData.append("image", imageFile)
+
+        await api.post("/dishes", formData);
         // await addDish({ dish, imageFile })
-        alert("Prato criado com sucesso")
+        alert("Prato criado com sucesso!")
 
         navigate("/");
     }

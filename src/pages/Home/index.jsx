@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import { Container, Content, Dishes, Header } from "./styles";
 
@@ -13,9 +13,19 @@ import salada_ravanello from "../../assets/dishes/salada_ravanello_small.png"
 import macarrons from "../../assets/macarrons.png"
 
 export function Home() {
-
-
     const { user } = useAuth();
+
+    const [dishes, setDishes] = useState({})
+
+    useEffect(() => {
+        async function fetchDishes() {
+            const response = await api.get("dishes");
+            setTags(response.data);
+
+        }
+        fetchDishes();
+    }, []);
+
     return( 
         <Container>
             <Navbar />
