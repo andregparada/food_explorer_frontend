@@ -150,11 +150,19 @@ export function UpdateDish() {
                         onChange={e => setDescription(e.target.value)}
                     />
 
-                    <Button 
-                        className="save" 
-                        title="Salvar alterações" 
-                        onClick={handleAddDish}
-                    />
+                    <div className="buttons">
+                        <Button 
+                            className="save" 
+                            title="Excluir prato" 
+                            onClick={handleAddDish}
+                        />
+
+                        <Button 
+                            className="save" 
+                            title="Salvar alterações" 
+                            onClick={handleAddDish}
+                        />
+                    </div>
 
                 </Content>
             </main>

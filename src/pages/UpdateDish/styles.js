@@ -98,4 +98,13 @@ export const Content = styled.div`
     .save {
         background-color: ${({ theme }) => theme.COLORS.TOMATO_400};
     }
+
+    .buttons {
+        display: flex;
+        gap: 3.2rem;
+
+        button:first-child {
+            background-color: ${({ theme }) => theme.COLORS.DARK_800};
+        }
+    }
 `
