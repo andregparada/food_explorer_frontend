@@ -1,6 +1,9 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
+import { register } from 'swiper/element/bundle';
 
 import { Container, Content, Dishes, Header } from "./styles";
+
+import { api } from "../../services/api";
 
 import { useAuth } from "../../hooks/auth";
 import { USER_ROLE } from "../../utils/roles";
@@ -12,22 +15,26 @@ import { Card } from "../../components/Card";
 import salada_ravanello from "../../assets/dishes/salada_ravanello_small.png"
 import macarrons from "../../assets/macarrons.png"
 
+register();
+
 export function Home() {
     const { user } = useAuth();
 
-    const [dishes, setDishes] = useState({})
+    const [dishes, setDishes] = useState([])
 
     useEffect(() => {
         async function fetchDishes() {
-            const response = await api.get("dishes");
-            setTags(response.data);
-
+            const response = await api.get("/menu");
+            setDishes(response.data);
         }
         fetchDishes();
     }, []);
 
+
+
     return( 
         <Container>
+            
             <Navbar />
             <main>
                 <Content>         
@@ -38,34 +45,48 @@ export function Home() {
                     </Header>
 
                     <h3>Entradas</h3>
-                    <Dishes>
-                        <Card 
-                            source={salada_ravanello}
-                            alt="salada ravanello"
-                            name="Salada Ravanello >"
-                            price="R$ 49,97"
-                        />
-                    </Dishes>
+                    <div className="card-wrapper">
+
+                        {
+                            dishes.map(dish => (
+                                <Dishes>
+                                <Card
+                                    key={String(dish.id)}
+                                    source={dish.image}
+                                    alt={dish.name}
+                                    name="Salada Ravanello >"
+                                    price={dish.price}
+                                    id={dish.id}
+                                />
+                            </Dishes>
+                            ))
+                        }
+                    </div>
 
                     <h3>Pratos Principais</h3>
-                    <Dishes>
-                        <Card 
-                            source={salada_ravanello}
-                            alt="salada ravanello"
-                            name="Salada Ravanello >"
-                            price="R$ 49,97"
-                        />
-                    </Dishes>
+                    <div className="card-wrapper">
+
+                        <Dishes>
+                            <Card 
+                                source={salada_ravanello}
+                                alt="salada ravanello"
+                                name="Salada Ravanello >"
+                                price="R$ 49,97"
+                            />
+                        </Dishes>
+                    </div>
                     
                     <h3>Pratos Principais</h3>
-                    <Dishes>
-                        <Card 
-                            source={salada_ravanello}
-                            alt="salada ravanello"
-                            name="Salada Ravanello >"
-                            price="R$ 49,97"
-                        />
-                    </Dishes>
+                    <div className="card-wrapper">
+                        <Dishes>
+                            <Card 
+                                source={salada_ravanello}
+                                alt="salada ravanello"
+                                name="Salada Ravanello >"
+                                price="R$ 49,97"
+                            />
+                        </Dishes>
+                    </div>
 
                 </Content>   
             </main>

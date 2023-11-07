@@ -29,6 +29,13 @@ export const Content = styled.div`
     h3:first-of-type {
         margin-top: 6.2rem;
     }
+
+    .card-wrapper {
+        display: flex;
+        gap: 1.6rem;
+        max-width: 37rem;
+        overflow-x: scroll;
+    }
 `;
 
 export const Header = styled.div`
