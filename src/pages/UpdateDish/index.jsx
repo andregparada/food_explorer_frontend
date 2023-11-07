@@ -1,7 +1,5 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
-
-import { useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Link, useNavigate, useParams } from "react-router-dom";
 
 import { useAuth } from "../../hooks/auth";
 
@@ -20,6 +18,7 @@ import { Footer } from "../../components/Footer";
 export function UpdateDish() {
     const { addDish } = useAuth();
 
+    const [data, setData] = useState(null)
     const [imageFile, setImageFile] =useState(null)
     const [name, setName] = useState("")
     const [categorie, setCategorie] = useState("")
@@ -30,6 +29,7 @@ export function UpdateDish() {
     const[newIngredient, setNewIngredient] = useState("");
 
     const navigate = useNavigate();
+    const params = useParams();
 
     function handleSetImage(event) {
         const file = event.target.files[0];
@@ -67,6 +67,11 @@ export function UpdateDish() {
         navigate("/");
     }
 
+    useEffect(() => {
+        async function fetchDish(){
+            const response = await api.get()
+        }
+    },[]);
 
     return (
         <Container>
