@@ -84,7 +84,6 @@ export function UpdateDish() {
             setData(response.data)
             response.data.ingredients.map(ingredient => {
                 setIngredients(prevstate => {
-                    console.log(prevstate.includes(ingredient))
                     if(prevstate.includes(ingredient.name)){
                         return [...prevstate]
                     } else {

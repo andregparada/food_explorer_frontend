@@ -26,6 +26,11 @@ export function Home() {
         async function fetchDishes() {
             const response = await api.get("/menu");
             setDishes(response.data);
+            console.log(response.data)
+            response.data.map(dish => {
+                console.log(dish.image)
+                dish.image = `${api.defaults.baseURL}/files/${dish.image}`
+            })
         }
         fetchDishes();
     }, []);

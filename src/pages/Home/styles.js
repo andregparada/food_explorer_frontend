@@ -35,6 +35,10 @@ export const Content = styled.div`
         gap: 1.6rem;
         max-width: 37rem;
         overflow-x: scroll;
+
+        img {
+            width: 8.8rem;
+        }
     }
 `;
 
