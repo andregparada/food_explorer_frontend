@@ -107,4 +107,8 @@ export const Content = styled.div`
             background-color: ${({ theme }) => theme.COLORS.DARK_800};
         }
     }
+
+    textarea {
+        color: ${({ theme }) => theme.COLORS.LIGHT_400};
+    }
 `

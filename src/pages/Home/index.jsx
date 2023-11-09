@@ -59,7 +59,7 @@ export function Home() {
                                     key={String(dish.id)}
                                     source={dish.image}
                                     alt={dish.name}
-                                    name="Salada Ravanello >"
+                                    name={dish.name}
                                     price={dish.price}
                                     id={dish.id}
                                 />

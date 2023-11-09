@@ -46,9 +46,6 @@ export function UpdateDish() {
     }
 
     async function handleUpdateDish() {
-        if(!name || !categorie || !price  || !description) {
-            return alert("Preencha todos os campos antes de adcionar prato.")
-        }
 
         if(newIngredient) {
             return alert("Você deixou um ingrediente no campo para adiconar. Clique para adcionar ou deixe o campo vazio.")
