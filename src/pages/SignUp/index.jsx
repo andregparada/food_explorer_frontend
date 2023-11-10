@@ -1,13 +1,14 @@
 import { useState } from "react";
+
 import { Link, useNavigate } from "react-router-dom";
 
 import { api } from "../../services/api"
 
-import { Container, Logo } from "./styles";
-
 import { Input } from "../../components/Input"
 import { Button } from "../../components/Button"
 import { ButtonText } from "../../components/ButtonText"
+
+import { Container, Logo } from "./styles";
 
 export function SignUp() {
     const [name, setName] = useState("");
@@ -44,26 +45,32 @@ export function SignUp() {
                 <h1>food explorer</h1>
             </Logo>
 
-            <p>Seu nome</p>
-            <Input
-                type="text"
-                placeholder="Exemplo: Maria da Silva"
-                onChange={e => setName(e.target.value)}
-            />
+            <div>
+                <p>Seu nome</p>
+                <Input
+                    type="text"
+                    placeholder="Exemplo: Maria da Silva"
+                    onChange={e => setName(e.target.value)}
+                />
+            </div>
 
-            <p>E-mail</p>
-            <Input
-                type="text"
-                placeholder="Exemplo: exemplo@exemplo.com.br"
-                onChange={e => setEmail(e.target.value)}
-            />
+            <div>
+                <p>E-mail</p>
+                <Input
+                    type="text"
+                    placeholder="Exemplo: exemplo@exemplo.com.br"
+                    onChange={e => setEmail(e.target.value)}
+                />
+            </div>
 
-            <p>Senha</p>
-            <Input
-                type="password"
-                placeholder="No mínimo 6 caracteres"
-                onChange={e => setPassword(e.target.value)}
-            />
+            <div>                
+                <p>Senha</p>
+                <Input
+                    type="password"
+                    placeholder="No mínimo 6 caracteres"
+                    onChange={e => setPassword(e.target.value)}
+                />
+            </div>
 
             <Button title="Criar Conta" onClick={handleSignUp} />
 

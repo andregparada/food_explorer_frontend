@@ -29,21 +29,28 @@ export function SignIn() {
                 <h1>food explorer</h1>
             </Logo>
 
-            <p>E-mail</p>
-            <Input
-                type="text"
-                placeholder="Exemplo: exemplo@exemplo.com.br"
-                onChange={e => setEmail(e.target.value)}
-            />
+            <div>
+                <p>E-mail</p>
+                <Input
+                    type="text"
+                    placeholder="Exemplo: exemplo@exemplo.com.br"
+                    onChange={e => setEmail(e.target.value)}
+                />
+            </div>
 
-            <p>Senha</p>
-            <Input
-                type="password"
-                placeholder="No mínimo 6 caracteres"
-                onChange={e => setPassword(e.target.value)}
-            />
+            <div>
+                <p>Senha</p>
+                <Input
+                    type="password"
+                    placeholder="No mínimo 6 caracteres"
+                    onChange={e => setPassword(e.target.value)}
+                />
+            </div>
 
-            <Button title="Entrar" onClick={handleSignIn} />
+            <Button 
+                title="Entrar" 
+                onClick={handleSignIn} 
+            />
 
             <Link to="/register">
                 <ButtonText title="Criar uma conta" />

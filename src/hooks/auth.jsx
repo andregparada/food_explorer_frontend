@@ -2,7 +2,7 @@ import { createContext, useContext, useState, useEffect } from "react";
 
 import { api } from "../services/api";
 
-export const AuthContexxt = createContext({});
+export const AuthContext = createContext({});
 
 function AuthProvider({ children }) {
     const [data, setData] = useState({});
@@ -26,7 +26,6 @@ function AuthProvider({ children }) {
                 alert("Não foi possível entrar.")
             }
         }
-
     }
 
     function signOut() {
@@ -35,6 +34,41 @@ function AuthProvider({ children }) {
 
         setData({})
     }
+
+    useEffect(() => {
+        const token = localStorage.getItem("@foodexplorer:token");
+        const user = localStorage.getItem("@foodexplorer:user");
+
+        if(token && user) {
+            api.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+
+            setData({
+                token,
+                user: JSON.parse(user)
+            });
+        }
+
+    }, []);
+
+    return (
+        <AuthContext.Provider value={{ 
+            signIn,
+            signOut,
+            // addDish,
+            user:data.user 
+        }}>
+            {children}
+        </AuthContext.Provider>
+    )
+}
+
+function useAuth(){
+    const context = useContext(AuthContext);
+
+    return context;
+}
+
+export { AuthProvider, useAuth };
 
     // async function addDish({ dish, imageFile }) {
     //     try { 
@@ -61,39 +95,3 @@ function AuthProvider({ children }) {
     //     alert("Prato criado com sucesso!");
     //     navigate("/");
     // }
-
-
-    useEffect(() => {
-        const token = localStorage.getItem("@foodexplorer:token");
-        const user = localStorage.getItem("@foodexplorer:user");
-
-        if(token && user) {
-            api.defaults.headers.common['Authorization'] = `Bearer ${token}`;
-
-            setData({
-                token,
-                user: JSON.parse(user)
-            });
-        }
-
-    }, []);
-
-    return (
-        <AuthContexxt.Provider value={{ 
-            signIn,
-            signOut,
-            // addDish,
-            user:data.user 
-        }}>
-            {children}
-        </AuthContexxt.Provider>
-    )
-}
-
-function useAuth(){
-    const context = useContext(AuthContexxt);
-
-    return context;
-}
-
-export { AuthProvider, useAuth };

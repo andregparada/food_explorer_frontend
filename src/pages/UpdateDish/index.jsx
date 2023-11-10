@@ -16,8 +16,6 @@ import { Button } from "../../components/Button"
 import { Footer } from "../../components/Footer";
 
 export function UpdateDish() {
-    const { addDish } = useAuth();
-
     const [data, setData] = useState(null)
     const [imageFile, setImageFile] =useState(null)
     const [name, setName] = useState("")
@@ -92,7 +90,7 @@ export function UpdateDish() {
 
         fetchDish();
     },[]);
-
+    
     return (
         <Container>
             <Navbar />

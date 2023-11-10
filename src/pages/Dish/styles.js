@@ -39,9 +39,10 @@ export const Content = styled.div`
 
     .tags {
         display: grid;
-        grid-template-columns: auto auto auto;
+        grid-template-columns: 33% 33% 33%;
         justify-content: space-between;
         row-gap: 2.4rem;
+        column-gap: 2.4rem;
     }
 
     .order {

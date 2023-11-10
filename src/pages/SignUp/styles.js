@@ -1,10 +1,16 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-    
+    box-sizing: content-box;
+    max-width: 31.6rem;
     height: 100vh;
 
-    padding: 15.8rem 4.7rem 0 6.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+
+    padding: 15.8rem 2rem;
+    margin-inline: auto;
 
     p {
         ${({ theme }) => theme.FONTS.ROBOTO_SMALL_REGULAR}
@@ -15,13 +21,8 @@ export const Container = styled.div`
 
     button:last-of-type {
         ${({ theme }) => theme.FONTS.POPPINS_100_MEDIUM}
-        margin: 3.2rem auto 0;
+        margin-inline: auto;
     }
-
-    > div, button {
-        margin-bottom: 3.2rem;
-    }
-
 `;
 
 export const Logo = styled.div` 
@@ -34,5 +35,5 @@ export const Logo = styled.div`
         font-size: 3.8rem;
     }
 
-    margin-bottom: 7.3rem;
+    margin-bottom: 4.1rem;
 `;

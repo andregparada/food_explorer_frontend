@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 
-import { Dish } from "../pages/Dish";
 import { Home } from "../pages/Home";
+import { Dish } from "../pages/Dish";
 import { Menu } from "../pages/Menu";
 import { NewDish } from "../pages/NewDish";
 import { UpdateDish } from "../pages/UpdateDish"

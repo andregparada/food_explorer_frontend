@@ -12,7 +12,6 @@ import { Navbar } from "../../components/Navbar"
 import { Footer } from "../../components/Footer"
 import { Card } from "../../components/Card";
 
-import salada_ravanello from "../../assets/dishes/salada_ravanello_small.png"
 import macarrons from "../../assets/macarrons.png"
 
 register();
@@ -26,9 +25,7 @@ export function Home() {
         async function fetchDishes() {
             const response = await api.get("/menu");
             setDishes(response.data);
-            console.log(response.data)
             response.data.map(dish => {
-                console.log(dish.image)
                 dish.image = `${api.defaults.baseURL}/files/${dish.image}`
             })
         }
@@ -53,44 +50,67 @@ export function Home() {
                     <div className="card-wrapper">
 
                         {
-                            dishes.map(dish => (
-                                <Dishes>
-                                <Card
-                                    key={String(dish.id)}
-                                    source={dish.image}
-                                    alt={dish.name}
-                                    name={dish.name}
-                                    price={dish.price}
-                                    id={dish.id}
-                                />
-                            </Dishes>
-                            ))
+                            dishes.map(dish => {
+                                if (dish.categorie === "starter"){                                    
+                                    return (
+                                        <Dishes>
+                                        <Card
+                                            key={String(dish.id)}
+                                            source={dish.image}
+                                            alt={dish.name}
+                                            name={dish.name}
+                                            price={dish.price}
+                                            id={dish.id}
+                                        />
+                                    </Dishes>
+                                    )
+                                }
+                            })
                         }
                     </div>
 
                     <h3>Pratos Principais</h3>
                     <div className="card-wrapper">
-
-                        <Dishes>
-                            <Card 
-                                source={salada_ravanello}
-                                alt="salada ravanello"
-                                name="Salada Ravanello >"
-                                price="R$ 49,97"
-                            />
-                        </Dishes>
+                    {
+                            dishes.map(dish => {
+                                if (dish.categorie === "main"){                                    
+                                    return (
+                                        <Dishes>
+                                        <Card
+                                            key={String(dish.id)}
+                                            source={dish.image}
+                                            alt={dish.name}
+                                            name={dish.name}
+                                            price={dish.price}
+                                            id={dish.id}
+                                        />
+                                    </Dishes>
+                                    )
+                                }
+                            })
+                        }
                     </div>
                     
                     <h3>Pratos Principais</h3>
                     <div className="card-wrapper">
-                        <Dishes>
-                            <Card 
-                                source={salada_ravanello}
-                                alt="salada ravanello"
-                                name="Salada Ravanello >"
-                                price="R$ 49,97"
-                            />
-                        </Dishes>
+                    {
+                            dishes.map(dish => {
+                                if (dish.categorie === "desert"){                                    
+                                    return (
+                                        <Dishes>
+                                        <Card
+                                            key={String(dish.id)}
+                                            source={dish.image}
+                                            alt={dish.name}
+                                            name={dish.name}
+                                            price={dish.price}
+                                            id={dish.id}
+                                        />
+                                    </Dishes>
+                                    )
+                                }
+                            })
+                        }
                     </div>
 
                 </Content>   
