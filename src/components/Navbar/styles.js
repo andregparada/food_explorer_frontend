@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 
 export const Container = styled.header`
-
     grid-area: header;
 
     height: 11.4rem;
@@ -22,10 +21,9 @@ export const Container = styled.header`
         position: relative;
 
         > svg:last-child {
-        position: absolute;
-
-        top: -1rem;
-        right: -1rem;
+            position: absolute;
+            top: -1rem;
+            right: -1rem;
         }
     }
 
@@ -34,9 +32,9 @@ export const Container = styled.header`
 export const Logo = styled.div`
     display: flex;
     align-items: center;
-    padding: 0 6.5rem;
 
     gap: 0.8rem;
+    padding: 0 6.5rem;
 
     h2 {
         font-size: 1.6rem;
@@ -45,6 +43,5 @@ export const Logo = styled.div`
     p {
         color: ${({ theme }) => theme.COLORS.CAKE_200};
         ${({ theme }) => theme.FONTS.ROBOTO_SMALLEST_REGULAR}
-
     }
 `

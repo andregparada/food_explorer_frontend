@@ -26,10 +26,6 @@ export const Content = styled.div`
         line-height: 140%;
     }
 
-    h3:first-of-type {
-        margin-top: 6.2rem;
-    }
-
     .card-wrapper {
         display: flex;
         gap: 1.6rem;
@@ -40,12 +36,18 @@ export const Content = styled.div`
             width: 8.8rem;
         }
     }
+
+    .card-wrapper::-webkit-scrollbar  {
+        display: none;
+    }
 `;
 
 export const Header = styled.div`
     height: 12rem;
-    padding: 3.6rem .8rem 2.2rem 15.3rem;
+
     border-radius: .3rem;
+    padding: 3.6rem .8rem 2.2rem 15.3rem;
+    margin-bottom: 6.2rem;
 
     background: hsl(198, 61%, 9%);
 
@@ -72,7 +74,5 @@ export const Header = styled.div`
 `;
 
 export const Dishes = styled.div`
-    display: flex;
     margin: 2.4rem 0;
-
 `;

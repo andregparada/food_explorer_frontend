@@ -1,24 +1,16 @@
 import { useEffect, useState, useRef } from "react";
-import { register } from 'swiper/element/bundle';
-
-import { Container, Content, Dishes, Header } from "./styles";
 
 import { api } from "../../services/api";
 
-import { useAuth } from "../../hooks/auth";
-import { USER_ROLE } from "../../utils/roles";
+import macarrons from "../../assets/macarrons.png"
 
 import { Navbar } from "../../components/Navbar"
 import { Footer } from "../../components/Footer"
 import { Card } from "../../components/Card";
 
-import macarrons from "../../assets/macarrons.png"
-
-register();
+import { Container, Content, Dishes, Header } from "./styles";
 
 export function Home() {
-    const { user } = useAuth();
-
     const [dishes, setDishes] = useState([])
 
     useEffect(() => {
@@ -48,21 +40,20 @@ export function Home() {
 
                     <h3>Entradas</h3>
                     <div className="card-wrapper">
-
                         {
                             dishes.map(dish => {
                                 if (dish.categorie === "starter"){                                    
                                     return (
                                         <Dishes>
-                                        <Card
-                                            key={String(dish.id)}
-                                            source={dish.image}
-                                            alt={dish.name}
-                                            name={dish.name}
-                                            price={dish.price}
-                                            id={dish.id}
-                                        />
-                                    </Dishes>
+                                            <Card
+                                                key={String(dish.id)}
+                                                source={dish.image}
+                                                alt={dish.name}
+                                                name={dish.name}
+                                                price={dish.price}
+                                                id={dish.id}
+                                            />
+                                        </Dishes>
                                     )
                                 }
                             })
@@ -91,7 +82,7 @@ export function Home() {
                         }
                     </div>
                     
-                    <h3>Pratos Principais</h3>
+                    <h3>Sobremesas</h3>
                     <div className="card-wrapper">
                     {
                             dishes.map(dish => {

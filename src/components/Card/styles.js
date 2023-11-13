@@ -1,15 +1,16 @@
 import styled from "styled-components"; 
 
 export const Container = styled.div`
-    background-color: ${({ theme }) => theme.COLORS.DARK_200};
-
     width: 21rem;
-    padding: 2.4rem;
-    border-radius: .8rem;
+
     text-align: center;
 
-    position: relative;
+    border-radius: .8rem;
+    padding: 2.4rem;
 
+    background-color: ${({ theme }) => theme.COLORS.DARK_200};
+
+    position: relative;
     > svg, .admin-logo {
         position: absolute;
 
@@ -19,16 +20,19 @@ export const Container = styled.div`
 
     
     p {
-        ${({ theme }) => theme.FONTS.POPPINS_100_MEDIUM}
         margin: 1.2rem 0 1.2rem;
+
+        ${({ theme }) => theme.FONTS.POPPINS_100_MEDIUM}
 
         color: ${({ theme }) => theme.COLORS.LIGHT_300};
     }
 
     span {
         margin-bottom: 1.2rem;
-        color: ${({ theme }) => theme.COLORS.CAKE_200};
+
         ${({ theme }) => theme.FONTS.ROBOTO_SMALL_REGULAR}
+
+        color: ${({ theme }) => theme.COLORS.CAKE_200};
     }
 
     .add-button {
@@ -38,7 +42,6 @@ export const Container = styled.div`
         gap: 1.6rem;
 
         ${({ theme }) => theme.FONTS.ROBOTO_SMALL_REGULAR}
-
     }
 
     button {
