@@ -7,27 +7,27 @@ export const Container = styled.footer`
     
     display: flex;
     align-items: center;
+    justify-content: space-around;
     gap: 0.8rem;
 
-    justify-content: space-around;
     padding: 2.2rem 2.7rem;
 
     background-color: ${({theme}) => theme.COLORS.DARK_600};
     
     p {
-        color: ${({theme}) => theme.COLORS.LIGHT_200};
+        font-size: 1.2rem;
         text-align: right;
 
-        font-size: 1.2rem;
+        color: ${({theme}) => theme.COLORS.LIGHT_200};
     }
 `;
 
 export const Logo = styled.div`
+    width: 14rem;
+
     display: flex;
     align-items: center;
     justify-content: space-around;
-    width: 14rem;
-
     gap: 0.8rem;
 
     h2 {

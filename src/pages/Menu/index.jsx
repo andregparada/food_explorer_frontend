@@ -1,36 +1,41 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import { useAuth } from "../../hooks/auth";
-import { USER_ROLE } from "../../utils/roles"
+import { Link, useNavigate } from "react-router-dom";
 
 import { api } from "../../services/api";
 
-import { Container, Header, Content } from "./styles";
+import { useAuth } from "../../hooks/auth";
+
+import { USER_ROLE } from "../../utils/roles"
 
 import { ButtonText } from "../../components/ButtonText";
 import { Footer } from "../../components/Footer";
 import { Input } from "../../components/Input";
 
+import { Container, Header, Content } from "./styles";
 
 export function Menu() {
     const { signOut, user } = useAuth();
 
+    const navigate = useNavigate();
+
     const [dishes, setDishes] = useState([])
     const [search, setSearch] = useState("")
+
+    function handleDish(id){
+        navigate(`/dish/${id}`)
+    };
 
     useEffect(() => {
         async function fetchDishes() {
             const response = await api.get(`/dishes?search=${search}`);
             setDishes(response.data);
         }
-
         fetchDishes();
     }, [search]);
 
     return (
         <Container>
             <Header>
-
                 <Link to="/">                    
                     <ButtonText
                         icon={
@@ -54,9 +59,12 @@ export function Menu() {
 
                     {
                         dishes && dishes.map(dish => (
-                            <Link key={String(dish.id)} to="/">
+                            <div 
+                                key={String(dish.id)} 
+                                onClick={() => handleDish(dish.id)}
+                            >
                                 <ButtonText title={dish.name} />
-                            </Link>
+                            </div>
                         ))
                     }
 
@@ -69,10 +77,8 @@ export function Menu() {
                             <ButtonText title="Novo Prato" />
                         </Link>
                     }
-
                 </Content>
             </main>
-
 
             <Footer />
         </Container>

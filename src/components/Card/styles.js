@@ -11,6 +11,7 @@ export const Container = styled.div`
     background-color: ${({ theme }) => theme.COLORS.DARK_200};
 
     position: relative;
+    
     > svg, .admin-logo {
         position: absolute;
 

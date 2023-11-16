@@ -18,10 +18,10 @@ export const Container = styled.div`
 `;
 
 export const Content = styled.div`
-    padding: 1.6rem 5.6rem 3.4rem;
-
     display: flex;
     flex-direction: column;
+
+    padding: 1.6rem 5.6rem 3.4rem;
 
     a > button {
         margin-top: 2rem;

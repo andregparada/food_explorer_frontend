@@ -35,11 +35,13 @@ export const Content = styled.div`
         img {
             width: 8.8rem;
         }
+
+        &::-webkit-scrollbar  {
+            display: none;
+        }
     }
 
-    .card-wrapper::-webkit-scrollbar  {
-        display: none;
-    }
+    
 `;
 
 export const Header = styled.div`

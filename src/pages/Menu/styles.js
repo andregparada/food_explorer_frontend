@@ -18,30 +18,31 @@ export const Container = styled.div`
 `;
 
 export const Header = styled.header`
-    button {
-        color: ${({ theme }) => theme.COLORS.LIGHT_100};
-        }
     grid-area: header;
 
-    height: 11.4rem;
     width: 100%;
+    height: 11.4rem;
+
+    padding: 6rem 2.8rem 2.8rem;
 
     background: ${({ theme }) => theme.COLORS.DARK_700};
 
-    padding: 6rem 2.8rem 2.8rem 2.8rem;
+    button {
+        color: ${({ theme }) => theme.COLORS.LIGHT_100};
+        }
 `
 
 export const Content = styled.div`
     margin: 3.6rem 2.8rem 0;
 
-
     > div {
-        border-radius: 0%.5rem;
+        border-radius: .5rem;
     }
 
     button {
-        margin-top: 3.6rem;
         width: 100%;
+        
+        margin-top: 3.6rem;
         padding-bottom: 1rem;
 
         border-bottom: 1px solid ${({ theme }) => theme.COLORS.DARK_1000};

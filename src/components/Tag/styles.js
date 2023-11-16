@@ -6,5 +6,4 @@ export const Container = styled.span`
 
     color: ${({ theme }) => theme.COLORS.LIGHT_300};
     background-color: ${({ theme }) => theme.COLORS.DARK_1000};
-
 `;
