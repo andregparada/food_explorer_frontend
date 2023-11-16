@@ -34,10 +34,9 @@ export const Logo = styled.div`
     align-items: center;
 
     gap: 0.8rem;
-    padding: 0 6.5rem;
 
     h2 {
-        font-size: 1.6rem;
+        font-size: clamp(.3rem, 1.6rem, 2rem);
     }
 
     p {

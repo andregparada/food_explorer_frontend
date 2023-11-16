@@ -45,39 +45,43 @@ export function SignUp() {
                 <h1>food explorer</h1>
             </Logo>
 
-            <div>
-                <p>Seu nome</p>
-                <Input
-                    type="text"
-                    placeholder="Exemplo: Maria da Silva"
-                    onChange={e => setName(e.target.value)}
-                />
+            <div className="input-wrapper">
+
+                <h2>Crie sua conta</h2>
+
+                <div>
+                    <p>Seu nome</p>
+                    <Input
+                        type="text"
+                        placeholder="Exemplo: Maria da Silva"
+                        onChange={e => setName(e.target.value)}
+                    />
+                </div>
+
+                <div>
+                    <p>E-mail</p>
+                    <Input
+                        type="text"
+                        placeholder="Exemplo: exemplo@exemplo.com.br"
+                        onChange={e => setEmail(e.target.value)}
+                    />
+                </div>
+
+                <div>                
+                    <p>Senha</p>
+                    <Input
+                        type="password"
+                        placeholder="No mínimo 6 caracteres"
+                        onChange={e => setPassword(e.target.value)}
+                    />
+                </div>
+
+                <Button title="Criar Conta" onClick={handleSignUp} />
+
+                <Link to="/">
+                    <ButtonText title="Já tenho uma conta" />
+                </Link>
             </div>
-
-            <div>
-                <p>E-mail</p>
-                <Input
-                    type="text"
-                    placeholder="Exemplo: exemplo@exemplo.com.br"
-                    onChange={e => setEmail(e.target.value)}
-                />
-            </div>
-
-            <div>                
-                <p>Senha</p>
-                <Input
-                    type="password"
-                    placeholder="No mínimo 6 caracteres"
-                    onChange={e => setPassword(e.target.value)}
-                />
-            </div>
-
-            <Button title="Criar Conta" onClick={handleSignUp} />
-
-            <Link to="/">
-                <ButtonText title="Já tenho uma conta" />
-            </Link>
-
         </Container>
     )
 }
