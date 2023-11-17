@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+import { DEVICE_BREAKPOINTS } from "../../styles/deviceBreakpoints.js"
+
 export const Container = styled.footer`
     grid-area: footer;
     
@@ -33,5 +35,25 @@ export const Logo = styled.div`
     h2 {
         color: ${({theme}) => theme.COLORS.LIGHT_700};
         font-size: 1.6rem;
+    }
+
+    .polygon-desktop {
+        display: none;
+    }
+
+    @media(min-width: ${DEVICE_BREAKPOINTS.MD}) {
+        width: 18.6rem;
+
+        h2 {
+            ${({ theme }) => theme.FONTS.ROBOTO_BIGGER_BOLD}
+        }
+
+        .polygon-desktop {
+            display: block;
+        }
+
+        .polygon-mobile {
+            display: none;
+        }
     }
 `

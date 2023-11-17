@@ -49,8 +49,14 @@ export const Container = styled.header`
 
         .input {
             display: flex;
+            justify-content: center;
+            text-align: center;
 
             width: 58rem;
+        }
+
+        .input input {
+            width: 28rem;
         }
 
         .button {
