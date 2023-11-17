@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { api } from "../../services/api";
 
 import macarrons from "../../assets/macarrons.png"
+import macarrons_big from "../../assets/macarrons_big.png"
 
 import { Navbar } from "../../components/Navbar"
 import { Footer } from "../../components/Footer"
@@ -33,7 +34,8 @@ export function Home() {
             <main>
                 <Content>         
                     <Header>
-                        <img src={macarrons} alt="macarrons" />
+                        <img className="image-mobile" src={macarrons} alt="macarrons" />
+                        <img className="image-desktop" src={macarrons_big} alt="macarrons" />
                         <h2>Sabores inigualáveis</h2>
                         <p>Sinta o cuidado do preparo com ingredientes selecionados.</p>
                     </Header>
@@ -52,6 +54,7 @@ export function Home() {
                                                 name={dish.name}
                                                 price={dish.price}
                                                 id={dish.id}
+                                                description={dish.description}
                                             />
                                         </Dishes>
                                     )
@@ -67,15 +70,16 @@ export function Home() {
                                 if (dish.categorie === "main"){                                    
                                     return (
                                         <Dishes>
-                                        <Card
-                                            key={String(dish.id)}
-                                            source={dish.image}
-                                            alt={dish.name}
-                                            name={dish.name}
-                                            price={dish.price}
-                                            id={dish.id}
-                                        />
-                                    </Dishes>
+                                            <Card
+                                                key={String(dish.id)}
+                                                source={dish.image}
+                                                alt={dish.name}
+                                                name={dish.name}
+                                                price={dish.price}
+                                                id={dish.id}
+                                                description={dish.description}
+                                            />
+                                        </Dishes>
                                     )
                                 }
                             })
@@ -89,15 +93,16 @@ export function Home() {
                                 if (dish.categorie === "desert"){                                    
                                     return (
                                         <Dishes>
-                                        <Card
-                                            key={String(dish.id)}
-                                            source={dish.image}
-                                            alt={dish.name}
-                                            name={dish.name}
-                                            price={dish.price}
-                                            id={dish.id}
-                                        />
-                                    </Dishes>
+                                            <Card
+                                                key={String(dish.id)}
+                                                source={dish.image}
+                                                alt={dish.name}
+                                                name={dish.name}
+                                                price={dish.price}
+                                                id={dish.id}
+                                                description={dish.description}
+                                            />
+                                        </Dishes>
                                     )
                                 }
                             })

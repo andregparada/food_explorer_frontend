@@ -8,7 +8,7 @@ import { Button } from "../Button";
 
 import { Container } from "./styles";
 
-export function Card({ source, alt, name, price, id }) {
+export function Card({ source, alt, name, price, id, description }) {
     const { user } = useAuth();
 
     const navigate = useNavigate();
@@ -42,29 +42,33 @@ export function Card({ source, alt, name, price, id }) {
             </div>
 
             <div onClick={() => handleDish(id)}>
-              <p>{name}</p>
+              <p className="name">{name}</p>
             </div>
+            <p className="description">{description}</p>
 
             <span>{price}</span>
 
-            { user.role === USER_ROLE.CUSTOMER && 
-              <div className="add-button">
-                <svg width="18" height="2" viewBox="0 0 18 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0 1.00023C0 0.447944 0.335786 0.000228882 0.75 0.000228882H17.25C17.6642 0.000228882 18 0.447944 18 1.00023C18 1.55251 17.6642 2.00023 17.25 2.00023H0.75C0.335786 2.00023 0 1.55251 0 1.00023Z" fill="white"/>
-                </svg>
+            <div className="order-wrap">
+              { user.role === USER_ROLE.CUSTOMER && 
+                <div className="add-button">
+                  <svg width="18" height="2" viewBox="0 0 18 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0 1.00023C0 0.447944 0.335786 0.000228882 0.75 0.000228882H17.25C17.6642 0.000228882 18 0.447944 18 1.00023C18 1.55251 17.6642 2.00023 17.25 2.00023H0.75C0.335786 2.00023 0 1.55251 0 1.00023Z" fill="white"/>
+                  </svg>
 
-                <p>01</p>
+                  <p>01</p>
 
-                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0 9.00023C0 8.58602 0.335786 8.25023 0.75 8.25023H17.25C17.6642 8.25023 18 8.58602 18 9.00023C18 9.41444 17.6642 9.75023 17.25 9.75023H0.75C0.335786 9.75023 0 9.41444 0 9.00023Z" fill="white"/>
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M9 0.000228882C9.41421 0.000228882 9.75 0.336015 9.75 0.750229V17.2502C9.75 17.6644 9.41421 18.0002 9 18.0002C8.58579 18.0002 8.25 17.6644 8.25 17.2502V0.750229C8.25 0.336015 8.58579 0.000228882 9 0.000228882Z" fill="white"/>
-                </svg>
-              </div>
-            }
+                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0 9.00023C0 8.58602 0.335786 8.25023 0.75 8.25023H17.25C17.6642 8.25023 18 8.58602 18 9.00023C18 9.41444 17.6642 9.75023 17.25 9.75023H0.75C0.335786 9.75023 0 9.41444 0 9.00023Z" fill="white"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9 0.000228882C9.41421 0.000228882 9.75 0.336015 9.75 0.750229V17.2502C9.75 17.6644 9.41421 18.0002 9 18.0002C8.58579 18.0002 8.25 17.6644 8.25 17.2502V0.750229C8.25 0.336015 8.58579 0.000228882 9 0.000228882Z" fill="white"/>
+                  </svg>
+                </div>
+              }
 
-            { user.role === USER_ROLE.CUSTOMER && 
-              <Button title="incluir"/>
-            }
+              { user.role === USER_ROLE.CUSTOMER && 
+                <Button title="incluir"/>
+              }
+            </div>
+
 
             { user.role === USER_ROLE.ADMIN && 
               <div className="admin-margin"></div>

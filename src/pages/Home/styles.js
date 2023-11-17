@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+import { DEVICE_BREAKPOINTS } from "../../styles/deviceBreakpoints.js"
+
 export const Container = styled.div`
     width: 100%;
     height: 100vh;
@@ -41,7 +43,17 @@ export const Content = styled.div`
         }
     }
 
-    
+    @media(min-width: ${DEVICE_BREAKPOINTS.MD}) {
+        margin: 14.2rem 12.4rem 4.8rem;
+
+        .card-wrapper {
+            max-width: 112rem;
+
+            img {
+                width: 17.6rem;
+            }
+        }
+    }
 `;
 
 export const Header = styled.div`
@@ -71,6 +83,36 @@ export const Header = styled.div`
     p {
         font-size: 1.2rem;
         line-height: 140%;
+    }
+
+    .image-desktop {
+        display: none;
+    }
+
+    @media(min-width: ${DEVICE_BREAKPOINTS.MD}) {
+        height: 28rem;
+
+        border-radius: .8rem;
+
+        padding: 8.7rem 10.1rem 9.3rem 59.7rem;
+
+
+        h2 {
+            ${({ theme }) => theme.FONTS.POPPINS_500_MEDIUM}
+            white-space: nowrap;
+        }
+
+        p {
+            ${({ theme }) => theme.FONTS.ROBOT_SMALL_REGULAR}
+        }
+
+        .image-mobile {
+            display: none;
+        }
+
+        .image-desktop {
+            display: block;
+        }
     }
 
 `;
