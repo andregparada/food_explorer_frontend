@@ -90,7 +90,7 @@ export function Home() {
                     <div className="card-wrapper">
                     {
                             dishes.map(dish => {
-                                if (dish.categorie === "drinks"){                                    
+                                if (dish.categorie === "drink"){                                    
                                     return (
                                         <Dishes>
                                             <Card

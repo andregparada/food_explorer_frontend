@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+import { DEVICE_BREAKPOINTS } from "../../styles/deviceBreakpoints.js"
+
 export const Container = styled.div`
     width: 100%;
     height: 100vh;
@@ -110,5 +112,74 @@ export const Content = styled.div`
 
     textarea {
         color: ${({ theme }) => theme.COLORS.LIGHT_400};
+        margin-bottom: 2.4rem;
+    }
+
+    @media(min-width: ${DEVICE_BREAKPOINTS.MD}) {
+        margin: 4rem 7.4rem 11.6rem;
+
+        p {
+            margin: 3.2rem 0 1.6rem;
+        }
+
+        .back {
+            ${({ theme }) => theme.FONTS.POPPINS_300_BOLD}
+        }
+
+        .box-1 {
+            display: flex;
+            justify-content: space-between;
+
+            .image {
+                width: 22.9rem;
+            }
+
+            .name {
+                width: 46.3rem;
+                > div {
+                    background-color: ${({ theme }) => theme.COLORS.DARK_800};
+                }
+            }
+
+            .categorie {
+                width: 36.4rem;
+                > select {
+                    background-color: ${({ theme }) => theme.COLORS.DARK_800};
+                }
+
+            }
+        }
+
+        .box-2 {
+            display: flex;
+            justify-content: space-between;
+
+            .ingredients div {
+                height: 3.2rem;
+            }
+
+            .ingredients-box {
+                width: 83.7rem;
+            }
+
+            .price {
+                width: 25.1rem;
+                > div {
+                    background-color: ${({ theme }) => theme.COLORS.DARK_800};
+                }
+            }
+        }
+
+        .button {
+            display: flex;
+            flex-direction: row-reverse;
+            margin-top: 2rem;
+        }
+        .save {
+            width: 17.2rem;
+
+            ${({ theme }) => theme.FONTS.POPPINS_100_MEDIUM}
+            text-align: center;
+        }
     }
 `
