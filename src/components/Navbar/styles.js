@@ -53,6 +53,7 @@ export const Container = styled.header`
             text-align: center;
 
             width: 58rem;
+
         }
 
         .input input {
@@ -69,7 +70,13 @@ export const Container = styled.header`
 
         .svg {
             width: 2.2rem;
+            cursor: pointer;
         }
+
+        #pedidos {
+            display: none;
+        }
+
     }
 
 `
@@ -105,7 +112,7 @@ export const Logo = styled.div`
             text-align: end;
         }
 
-        .polygon-mobile {
+        .polygon-mobile, .pedidos {
             display: none;
         }
 

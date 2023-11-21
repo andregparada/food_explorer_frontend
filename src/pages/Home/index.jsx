@@ -40,32 +40,9 @@ export function Home() {
                         <p>Sinta o cuidado do preparo com ingredientes selecionados.</p>
                     </Header>
 
-                    <h3>Entradas</h3>
+                    <h3>Refeições</h3>
                     <div className="card-wrapper">
                         {
-                            dishes.map(dish => {
-                                if (dish.categorie === "starter"){                                    
-                                    return (
-                                        <Dishes>
-                                            <Card
-                                                key={String(dish.id)}
-                                                source={dish.image}
-                                                alt={dish.name}
-                                                name={dish.name}
-                                                price={dish.price}
-                                                id={dish.id}
-                                                description={dish.description}
-                                            />
-                                        </Dishes>
-                                    )
-                                }
-                            })
-                        }
-                    </div>
-
-                    <h3>Pratos Principais</h3>
-                    <div className="card-wrapper">
-                    {
                             dishes.map(dish => {
                                 if (dish.categorie === "main"){                                    
                                     return (
@@ -85,12 +62,35 @@ export function Home() {
                             })
                         }
                     </div>
-                    
+
                     <h3>Sobremesas</h3>
                     <div className="card-wrapper">
                     {
                             dishes.map(dish => {
                                 if (dish.categorie === "desert"){                                    
+                                    return (
+                                        <Dishes>
+                                            <Card
+                                                key={String(dish.id)}
+                                                source={dish.image}
+                                                alt={dish.name}
+                                                name={dish.name}
+                                                price={dish.price}
+                                                id={dish.id}
+                                                description={dish.description}
+                                            />
+                                        </Dishes>
+                                    )
+                                }
+                            })
+                        }
+                    </div>
+                    
+                    <h3>Bebidas</h3>
+                    <div className="card-wrapper">
+                    {
+                            dishes.map(dish => {
+                                if (dish.categorie === "drinks"){                                    
                                     return (
                                         <Dishes>
                                             <Card
