@@ -1,7 +1,4 @@
-import { useState, useEffect } from "react";
 import { Link, useNavigate } from 'react-router-dom';
-
-import { api } from "../../services/api";
 
 import { useAuth } from "../../hooks/auth";
 
@@ -9,7 +6,6 @@ import { USER_ROLE } from "../../utils/roles"
 
 import { Input } from "../Input"
 import { Button } from "../Button"
-import { ButtonText } from "../ButtonText";
 
 import { Container, Logo } from "./styles";
 
@@ -17,9 +13,6 @@ export function Navbar() {
     const { signOut ,user } = useAuth();
 
     const navigate = useNavigate();
-
-    const [dishes, setDishes] = useState([])
-    const [search, setSearch] = useState("")
 
     function handleNewDish(){
         navigate("/newdish")
@@ -34,13 +27,6 @@ export function Navbar() {
         navigate("/")
     }
 
-    useEffect(() => {
-        async function fetchDishes() {
-            const response = await api.get(`/dishes?search=${search}`);
-            setDishes(response.data);
-        }
-        fetchDishes();
-    }, [search]);
     
     return(
         <Container>
@@ -93,7 +79,6 @@ export function Navbar() {
             
             { user.role === USER_ROLE.CUSTOMER && 
                 <div id='pedidos'>
-                    pedidos
                     <svg width="27" height="23" viewBox="0 0 27 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M5.96118 8.36639C5.96118 7.81411 6.4089 7.36639 6.96118 7.36639H19.9612C20.5135 7.36639 20.9612 7.81411 20.9612 8.36639C20.9612 8.91868 20.5135 9.36639 19.9612 9.36639H6.96118C6.4089 9.36639 5.96118 8.91868 5.96118 8.36639Z" fill="white"/>
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M5.96118 12.3664C5.96118 11.8141 6.4089 11.3664 6.96118 11.3664H19.9612C20.5135 11.3664 20.9612 11.8141 20.9612 12.3664C20.9612 12.9187 20.5135 13.3664 19.9612 13.3664H6.96118C6.4089 13.3664 5.96118 12.9187 5.96118 12.3664Z" fill="white"/>
