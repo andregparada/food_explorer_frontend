@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+import { DEVICE_BREAKPOINTS } from "../../styles/deviceBreakpoints.js"
+
 export const Container = styled.div`
     width: 100%;
     height: 100vh;
@@ -37,10 +39,14 @@ export const Content = styled.div`
         text-align: center;
     }
 
+    h2 {
+        text-align: center;
+    }
+
     .tags {
-        display: grid;
-        grid-template-columns: 33% 33% 33%;
-        justify-content: space-between;
+        display: flex;
+        max-width: 26rem;
+        flex-wrap: wrap;
         row-gap: 2.4rem;
         column-gap: 2.4rem;
     }
@@ -63,5 +69,74 @@ export const Content = styled.div`
             font-weight: bold;
         }
     }
+    
+    .edit-dish {
+        margin-top: 4.8rem;
+    }
+
+    @media(min-width: ${DEVICE_BREAKPOINTS.MD}) {
+            .content-desktop {
+                display: flex;
+                gap: 4.8rem;
+
+                margin: 4.2rem 12rem 23rem;
+
+                img {
+                    width: 39rem;
+                    height: 39rem;
+                }
+
+                h2 {
+                    text-align: left;
+                    ${({ theme }) => theme.FONTS.POPPINS_500_MEDIUM}
+                }
+
+                p { 
+                    ${({ theme }) => theme.FONTS.POPPINS_300_REGULAR}
+                    text-align: left;
+                }
+
+                .dish-data {
+                    padding: 4.5rem 0;
+                }
+
+                .tags {
+                    display: flex;
+                    max-width: 68rem;
+                    gap: 1.2rem;
+
+                    span {
+                        padding: .8rem .8rem;
+                        ${({ theme }) => theme.FONTS.POPPINS_100_MEDIUM}
+                    }
+                }
+
+                button {
+                    margin-top: 4.8rem;
+                }
+
+                .edit-dish {
+                    display: flex;
+                    justify-content: left;
+
+                    button {
+                        margin: 0;
+                    }
+                }
+
+                .edit-dish button {
+                    width: 13rem;
+                }
+
+                .order {
+                    justify-content: left;
+
+                    button {
+                        margin: 0;
+                        width: 16rem;
+                    }
+                }
+            }
+        }
 
 `

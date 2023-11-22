@@ -129,6 +129,7 @@ export const Content = styled.div`
         .box-1 {
             display: flex;
             justify-content: space-between;
+            gap: 3.2rem;
 
             .image {
                 width: 22.9rem;
@@ -153,6 +154,7 @@ export const Content = styled.div`
         .box-2 {
             display: flex;
             justify-content: space-between;
+            gap: 3.2rem;
 
             .ingredients div {
                 height: 3.2rem;

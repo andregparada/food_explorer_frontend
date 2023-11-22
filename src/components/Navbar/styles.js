@@ -40,8 +40,6 @@ export const Container = styled.header`
         height: 10.4rem;
 
         padding: 0;
-
-        /* padding: 2.4rem auto; */
     
         .menu {
             display: none;
@@ -53,7 +51,6 @@ export const Container = styled.header`
             text-align: center;
 
             width: 58rem;
-
         }
 
         .input input {
@@ -76,6 +73,7 @@ export const Container = styled.header`
         #pedidos {
             display: none;
         }
+
 
     }
 
@@ -111,6 +109,7 @@ export const Logo = styled.div`
         p {
             text-align: end;
         }
+
 
         .polygon-mobile, .pedidos {
             display: none;
