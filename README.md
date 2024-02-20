@@ -11,8 +11,7 @@ A aplicação é composta por dois tipos de usuários: clientes e administradore
 Stack:
 - O projeto utiliza Node.js e React.js
 
-Estrutura:
-  Frontend: 
+Estrutura Frontend: 
     - na pasta src
     - main.jsx reúne a estrutura final
     - routes reúne as rotas de autenticação para exibição das páginas
