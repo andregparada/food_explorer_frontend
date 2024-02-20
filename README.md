@@ -6,10 +6,10 @@
 
 Este projeto é um menu interativo de um restaurante fictício desenvolvido como desafio final para validação do certificado de web-designer oferecido pelo curso Explorer da Rocketseat.
 
-A aplicação é é composta por dois tipos de usuários: clientes e administradores. Os clientes podem buscar pratos e visualizar e os administradores, adcionar e editar os pratos.
+A aplicação é composta por dois tipos de usuários: clientes e administradores. Os clientes podem buscar pratos e visualizar e os administradores, adcionar e editar os pratos.
  
 Stack:
-  O projeto utiliza Node.js e React.js
+- O projeto utiliza Node.js e React.js
 
 Estrutura:
   Frontend: na pasta src
@@ -21,9 +21,9 @@ Estrutura:
 Como rodar em dev:
   fazer download do arquivo
   Baixar o node.js
-  Rodar em usando comando: npm install
+  Rodar  usando comando: npm install
   rodar: npm run dev
-  O arquivo estará rodando no laclhoast
+  O arquivo estará rodando no loclhoast
 
  Link do deploy:
   https://foodexplorer-agparada.netlify.app/
