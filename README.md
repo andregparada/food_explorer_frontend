@@ -2,7 +2,7 @@
 
 ![Captura de tela 2024-02-20 133405](https://github.com/andregparada/food_explorer_frontend/assets/113139448/3e672adf-c933-4f5e-8f0d-b0fb61066532)
 
-https://img.shields.io/badge/any_text-you_like-blue
+(https://img.shields.io/badge/any_text-you_like-blue)
 
 Este projeto é um menu interativo de um restaurante fictício desenvolvido como desafio final para validação do certificado de web-designer oferecido pelo curso Explorer da Rocketseat.
 
