@@ -11,12 +11,12 @@ A aplicação é composta por dois tipos de usuários: clientes e administradore
 Stack:
 - O projeto utiliza Node.js e React.js
 
-Estrutura Frontend: 
-    - na pasta src
-    - main.jsx reúne a estrutura final
-    - routes reúne as rotas de autenticação para exibição das páginas
-    - hooks/auth.jsx reúne a lógica de autenticação e cadastro de usuário. A autenticação como admin é dada direta no banco de dados
-    - pages e components reúnem a estrutura das páginas
+Estrutura Frontend:
+- na pasta src
+- main.jsx reúne a estrutura final
+- routes reúne as rotas de autenticação para exibição das páginas
+- hooks/auth.jsx reúne a lógica de autenticação e cadastro de usuário. A autenticação como admin é dada direta no banco de dados
+- pages e components reúnem a estrutura das páginas
 
 Como rodar em dev:
   - fazer download do arquivo
