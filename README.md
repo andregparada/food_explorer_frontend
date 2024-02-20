@@ -13,17 +13,19 @@ Stack:
 
 Estrutura:
   Frontend: na pasta src
-    main.jsx reúne a estrutura final
-    routes reúne as rotas de autenticação para exibição das páginas
-    hooks/auth.jsx reúne a lógica de autenticação e cadastro de usuário. A autenticação como admin é dada direta no banco de dados
-    pages e components reúnem a estrutura das páginas
+    - main.jsx reúne a estrutura final
+    - routes reúne as rotas de autenticação para exibição das páginas
+    - hooks/auth.jsx reúne a lógica de autenticação e cadastro de usuário. A autenticação como admin é dada direta no banco de dados
+    - pages e components reúnem a estrutura das páginas
 
 Como rodar em dev:
-  fazer download do arquivo
-  Baixar o node.js
-  Rodar  usando comando: npm install
-  rodar: npm run dev
-  O arquivo estará rodando no loclhoast
+  - fazer download do arquivo
+  - Baixar o node.js
+  - Rodar  usando comando: npm install
+  - rodar: npm run dev
+  - O arquivo estará rodando no loclhoast
 
  Link do deploy:
   https://foodexplorer-agparada.netlify.app/
+
+Site do curso: https://www.rocketseat.com.br/
