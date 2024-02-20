@@ -1,4 +1,5 @@
-![Captura de tela 2024-02-20 133405](https://github.com/andregparada/food_explorer_frontend/assets/113139448/fda67791-fe0b-4728-b558-fde83e07b9e9)
+
+![Captura de tela 2024-02-20 133405](https://github.com/andregparada/food_explorer_frontend/assets/113139448/3e672adf-c933-4f5e-8f0d-b0fb61066532)
 
 # food_explorer_frontend
 
